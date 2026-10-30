@@ -25,3 +25,10 @@ az aks update -g fbarryRG -n aks-observability --enable-azure-rbac
 Nous avons configuré les rôles d'accès sur le cluster :
 - Administrateur du cluster attribué à ton compte utilisateur.
 - Rôle de lecteur (`Azure Kubernetes Service Cluster User Role`) attribué au formateur (Steve Theval).
+
+## 5. Désactivation des comptes locaux
+Pour renforcer la sécurité du cluster et forcer l'authentification unique par Entra ID, nous avons désactivé les comptes locaux administrateurs par défaut.
+
+Commande utilisée :
+```bash
+az aks update -g fbarryRG -n aks-observability --disable-local-accounts
