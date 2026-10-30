@@ -20,3 +20,8 @@ Commande utilisée :
 ```bash
 az aks update -g fbarryRG -n aks-observability --enable-aad
 az aks update -g fbarryRG -n aks-observability --enable-azure-rbac
+
+## 4. Gestion des accès RBAC
+Nous avons configuré les rôles d'accès sur le cluster :
+- Administrateur du cluster attribué à ton compte utilisateur.
+- Rôle de lecteur (`Azure Kubernetes Service Cluster User Role`) attribué au formateur (Steve Theval).
