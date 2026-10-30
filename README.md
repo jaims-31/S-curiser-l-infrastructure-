@@ -32,3 +32,10 @@ Pour renforcer la sécurité du cluster et forcer l'authentification unique par 
 Commande utilisée :
 ```bash
 az aks update -g fbarryRG -n aks-observability --disable-local-accounts
+
+## 6. Activation d'Azure Policy
+Nous avons activé l'addon Azure Policy sur le cluster pour appliquer et vérifier les règles de gouvernance et de sécurité.
+
+Commande utilisée :
+```bash
+az aks enable-addons -g fbarryRG -n aks-observability --addons azure-policy
