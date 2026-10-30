@@ -12,3 +12,11 @@ Pour restreindre l'accès au cluster, nous avons ajouté une règle d'autorisati
 Commande utilisée :
 ```bash
 az aks update -g fbarryRG -n aks-observability --api-server-authorized-ip-ranges 86.201.70.133/32
+
+## 3. Authentification Entra ID & Azure RBAC
+Nous avons activé l'intégration Entra ID et le RBAC Azure sur le cluster AKS pour sécuriser et gérer l'accès des utilisateurs via des rôles Azure.
+
+Commande utilisée :
+```bash
+az aks update -g fbarryRG -n aks-observability --enable-aad
+az aks update -g fbarryRG -n aks-observability --enable-azure-rbac
