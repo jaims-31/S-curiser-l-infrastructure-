@@ -39,3 +39,8 @@ Nous avons activé l'addon Azure Policy sur le cluster pour appliquer et vérifi
 Commande utilisée :
 ```bash
 az aks enable-addons -g fbarryRG -n aks-observability --addons azure-policy
+
+## 7. Rôles Azure RBAC et Validation de l'Accès
+- Attribution du rôle **Azure Kubernetes Service RBAC Cluster Admin** à l'administrateur.
+- Attribution du rôle **Azure Kubernetes Service RBAC Reader** au formateur (Steve Theval).
+- Validation de la connexion réussie via `kubectl get nodes`.
